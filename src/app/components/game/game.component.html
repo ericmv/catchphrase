@@ -1,0 +1,45 @@
+
+
+<!-- <audio controls>
+  <source *ngIf="song?.source[quality]" [src]="song?.source[quality] | safeUrl" />
+</audio> -->
+
+<div class="container"
+     fxLayout="column"
+     fxLayout.xs="column"
+     fxLayoutGap=""
+     fxLayoutGap.xs="0">
+
+
+  <div id="phrase" fxLayout="column" fxFlex="80" fxLayoutAlign="center">
+    <!-- <div (click)="onBackPress()" id="back">Back</div> -->
+    <p class="current-phrase">{{current_phrase}}</p>
+  </div>
+
+  <div id="controls" fxLayout="row" fxFlex="20" >
+
+    <div (click)="incScore(1)" fxFlex="25" class="button" fxLayoutAlign="center" fxLayout="column">
+      <div>
+        <p class="score-text">Team 1</p>
+        <p class="score-text">{{team1_score}}</p>
+      </div>
+    </div>
+
+    <div (click)="onNext()" fxFlex="25" class="button" fxLayout="column" fxLayoutAlign="center">
+      <p class="button-text">Skip</p>
+    </div>
+
+    <div (click)="toggleAudio()" fxFlex="25" class="button" fxLayout="column" fxLayoutAlign="center">
+      <p class="button-text">Start/Stop</p>
+    </div>
+
+
+
+    <div (click)="incScore(2)" fxFlex="25" fxLayoutAlign="center" fxLayout="column">
+      <div>
+        <p class="score-text">Team 2</p>
+        <p class="score-text">{{team2_score}}</p>
+      </div>
+  </div>
+
+</div>
